@@ -1,0 +1,202 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background: #2c2c2c;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.balance {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.balance h2 {
+  color: #4ade80;
+}
+
+.transaction-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.transaction-form input,
+.transaction-form select {
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #333;
+  color: #e0e0e0;
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-form input::placeholder {
+  color: #888;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-form button,
+.cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.transaction-form button {
+  background-color: #4ade80;
+  color: #1a1a1a;
+}
+
+.transaction-form button:hover {
+  background-color: #3ab567;
+}
+
+.cancel-btn {
+  background-color: #6b7280;
+  color: #ffffff;
+}
+
+.cancel-btn:hover {
+  background-color: #4b5563;
+}
+
+.transaction-list h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.transaction-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.transaction-list li:last-child {
+  border-bottom: none;
+}
+
+.transaction-list li span {
+  flex: 1;
+  min-width: 80px;
+}
+
+.income {
+  color: #4ade80;
+}
+
+.expense {
+  color: #ef4444;
+}
+
+.transaction-actions {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  min-width: 120px;
+  justify-content: flex-end;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.edit-btn {
+  background-color: #3b82f6;
+}
+
+.edit-btn:hover {
+  background-color: #2563eb;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .transaction-form {
+    flex-direction: column;
+  }
+
+  .transaction-form input,
+  .transaction-form select,
+  .form-buttons {
+    width: 100%;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .transaction-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .transaction-list li span {
+    width: 100%;
+  }
+
+  .transaction-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
